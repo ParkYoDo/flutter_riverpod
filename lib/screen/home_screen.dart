@@ -4,6 +4,7 @@ import 'package:state/screen/auto_dispose_modifier_screen.dart';
 import 'package:state/screen/family_modifier_screen.dart';
 import 'package:state/screen/future_provider_screen.dart';
 import 'package:state/screen/listen_provider_screen.dart';
+import 'package:state/screen/provider_screen.dart';
 import 'package:state/screen/select_provider_screen.dart';
 import 'package:state/screen/state_notifier_provider_screen.dart';
 import 'package:state/screen/state_provider_screen.dart';
@@ -65,7 +66,13 @@ class HomeScreen extends StatelessWidget {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (_) => const SelectProviderScreen()));
                 },
-                child: const Text('SelectProviderScreen'))
+                child: const Text('SelectProviderScreen')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => const ProviderScreen()));
+                },
+                child: const Text('ProviderScreen'))
           ],
         ));
   }
