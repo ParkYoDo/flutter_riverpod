@@ -48,7 +48,13 @@ class CodeGenerationScreen extends ConsumerWidget {
                     },
                     child: const Text('increment')),
               ],
-            )
+            ),
+            // invalidate : provider state를 initialState로 변경
+            ElevatedButton(
+                onPressed: () {
+                  ref.invalidate(gStateNotifierProvider);
+                },
+                child: const Text('invalidate'))
           ],
         ));
   }
